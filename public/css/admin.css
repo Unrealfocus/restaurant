@@ -1,0 +1,316 @@
+*, ::after, ::before {
+    box-sizing: border-box;
+  }
+    
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: rgb(241, 232, 232);
+    }
+    
+    /* Float four columns side by side */
+    .column {
+      float: left;
+      width: 25%;
+      padding: 0 5px;
+    
+    }
+    
+    .row {margin: 0 -5px;}
+    
+    /* Clear floats after the columns */
+    .row:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+    
+    /* Responsive columns */
+    @media screen and (max-width: 600px) {
+      .column {
+        width: 100%;
+        display: block;
+        margin-bottom: 10px;
+      }
+    }
+    
+    /* Style the counter cards */
+    .card {
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+      padding: 16px;
+      text-align: center;
+      background-color:white;
+      color: black;
+      border-radius:3rem; 
+    }
+    
+    .fa {font-size:50px;}
+    .sidenav {
+      height: 100%;
+      width: 200px;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      background-color: white;
+      overflow-x: hidden;
+      /*padding-top: 5px;*/
+      padding-left: 10px;
+  }
+  
+  /* Style the sidenav links and the dropdown button */
+  .sidenav a, .dropdown-btn {
+      padding: 16px 8px 6px 16px;
+      text-transform: capitalize;
+      text-decoration: none;
+      font-size: 16px;
+      color: #818181;
+      display: block;
+      border: none;
+      background: none;
+      width: 100%;
+      text-align: left;
+      cursor: pointer;
+      outline: none;
+  }
+  /*header sidenav*/
+  .sidenav .sidenav-header img {
+    border-radius: 50px;  /* Rounded border */
+     padding-right:5px;/* Some padding */
+     margin-left: 1px;
+    width: 50px; /* Set a small width */
+    height:50px;
+  }
+  .product img{
+    border-radius: 6px;  /* Rounded border */
+     padding-right:5px;/* Some padding */
+     margin-left: 1px;
+    width: 50px; /* Set a small width */
+    height:50px;
+    float:left;
+  }
+  .product-name{
+    font-size:16px;
+    color:purple;
+  }
+  .product-descript{
+    font-size:12px;
+  }
+  .order-row{
+    width:30%;
+  float: left;
+  margin: 5px;
+  padding: 5px;
+  }
+  
+  .orderdetails{
+    width:100%;
+  }
+  .sidenav-header{
+    padding: 10px;
+    font-size:12px;
+    font-weight: 50;
+    color:lightblue;
+    font-style: italic;
+    margin-bottom: 1.7rem;
+    vertical-align: middle;
+  }
+  /* On mouse-over */
+  .sidenav a:hover, .dropdown-btn:hover {
+      color:purple;
+       background-color: #f7f4f4 ;
+  }
+  /*dashboard styling*/
+  .column .card .icon{
+    margin:auto;
+    width:6rem;
+    height:6rem;
+    border-radius: 4rem;
+    background-color:purple;
+    float:left;
+  }
+  .column .card .details{
+  margin:auto;
+  }
+  /* Main content */
+  .main {
+      margin-left: 200px; /* Same as the width of the sidenav */
+      font-size: 20px; /* Increased text to enable scrolling */
+      padding: 0px 10px;
+  }
+  
+  /* Add an active class to the active dropdown button */
+  .active {
+      background-color: green;
+      color: white;
+  }
+  
+  /* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
+  .dropdown-container {
+      display: none;
+      background-color: #262626;
+      padding-left: 8px;
+  }
+  
+  /* Optional: Style the caret down icon */
+  .fa-caret-down {
+      float: right;
+      padding-right: 8px;
+  }
+  
+  /* Some media queries for responsiveness */
+  @media screen and (max-height: 450px) {
+      .sidenav {padding-top: 15px;}
+      .sidenav a {font-size: 18px;}
+  }
+  /*orderlist styling*/
+  table{
+    width:100%;
+    background-color: white;
+    border-radius: 1rem;
+  }
+  .table-container{
+    margin: 1.4rem auto;
+    width: 95%;
+  }
+  th, td {
+   padding:1rem 1.3rem 1rem 1rem;
+    text-align: left;
+    /*border-bottom: 1px solid #ddd;*/
+  }
+  th{
+    font-size:16px;
+  }
+  td{
+    font-size:16px;
+    font-weight: 200;
+  }
+  tr:hover {background-color:#f7f4f4 ;}
+  .search{
+    padding-bottom:10px;
+  }
+  input[type=search]{
+    width:16rem;
+    border:none;
+    height:3rem;
+    border-radius: 4rem;
+    font-size:16px;
+    text-align: center;
+  }
+  table button{
+    color:purple;
+    width:6rem;
+    padding:5px;
+    background-color:white;
+    border:1px solid purple;
+    border-radius:1rem;
+    cursor: pointer;
+  }
+  table button:hover{
+    color:white;
+    background-color:purple;
+  }
+  /*orderlist details*/
+  .orderbutton{
+    float:right
+  }
+  .orderlist-button{
+    background-color: white;
+    border:2px solid purple;
+    color:purple;
+    width:12rem;
+    font-size:16px;
+    padding:10px;
+    border-radius:1rem; 
+  }
+  .orderlist-button:hover{
+    background-color: purple;
+    color:white;
+    -webkit-box-shadow: 0 10px 30px 0px purple;
+  }
+  .orderid h2{
+    float:left;
+  }
+  .orderdetails-container{
+    margin:10px;
+    padding:10px;
+  }
+  .orderlist-detail-container{
+    margin-top:30px;
+  }
+  
+      input[type=submit]{
+          margin:auto;
+      font-family: Poppins-Medium;
+      font-size: 16px;
+      color: #fff;
+      line-height: 1.2;
+      text-transform: uppercase;
+      display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+  width: 90%;
+  height: 50px;
+  background-color: #57b846;
+  border-radius: 25px;
+  -webkit-box-shadow: 0 10px 30px 0px rgba(87, 184, 70, 0.5);
+    }
+    .order-row .personnel-details{
+      width:100%;
+      height: 25rem;
+      background-color: white;
+      border-radius:10px;
+    }
+    .order-row .orderdetails{
+      width:235%;
+    }
+    .order-row .personnel-details .location{
+      
+      height:50%;
+      padding: 10px;
+      
+    }
+    .order-row .personnel-details .order-note{
+      background-color: #262626;
+      color:white;
+      height:100%;
+      padding: 10px;
+    }
+    /*add menu stying*/
+  .add-menu input[type=text],.add-menu select,.add-menu textarea,.add-menu input[type=number],.add-menu input[type=file] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+  }
+  
+  .add-menu input[type=submit] {
+    background-color:white;
+    color: rgb(40, 160, 40);
+    padding: 12px 20px;
+    border: 1px solid rgb(40, 160, 40) ;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  input,textarea{
+    outline: none;
+  }
+  label{
+    color:purple;
+  }
+  input[type=submit]:hover {
+    background-color: #52bb58;
+    color:white;
+    -webkit-box-shadow: 0 10px 30px 0px rgba(87, 184, 70, 0.5);
+  }
+  
+  .container .add-menu {
+    background-color: white;
+    padding:10px;
+     border-radius: 10px;
+  }
+  
