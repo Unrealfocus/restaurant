@@ -10,7 +10,7 @@
     @csrf
     @if ($errors->any())
     <div>
-        something wne wrong
+        something went wrong
     </div>
       <ul>
           @foreach ($errors->all() as $error )
